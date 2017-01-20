@@ -1,4 +1,4 @@
-_commit=6c9caba7bbaf9076eb0cf38ae14730b5c2d1f7fc
+_commit=9caeb711964b234c0efdc5a57c541e2157cba893
 pkgname=audacious-plugins
 pkgver=3.8.1
 pkgrel=1
