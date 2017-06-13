@@ -1,20 +1,18 @@
-_commit=9caeb711964b234c0efdc5a57c541e2157cba893
+_commit=b13a35db2cef474925b385eef8291ea21ec7fb36
 pkgname=audacious-plugins
-pkgver=3.8.1
+pkgver=3.8.2
 pkgrel=1
 pkgdesc="Plugins for Audacious"
 arch=('x86_64')
 url="http://audacious-media-player.org/"
 license=('BSD' 'GPL')
 
-makedepends=("audacious" 'qt5-multimedia'
-             'glib2' 'python2' # for gdbus-codegen
-             'alsa-lib' 'pulseaudio' 'jack' 'lame' 'libvorbis' 'flac'
-             'mpg123' 'faad2' 'ffmpeg' 'libmodplug' 'fluidsynth' 'libcdio-paranoia' 'wavpack'
-             'dbus-glib' 'libnotify' 'curl' 'libmtp'
-             'neon' 'libmms' 'libcue'
+depends=('audacious' 'qt5-multimedia' 'glib2' 'python2' 'alsa-lib' 'pulseaudio' 'jack' 'lame' 'libvorbis' 'flac'
+         'mpg123' 'faad2' 'ffmpeg' 'libmodplug' 'fluidsynth' 'libcdio-paranoia' 'wavpack'
+         'dbus-glib' 'libnotify' 'curl' 'libmtp' 'neon' 'libmms' 'libcue')
 
-            'alsa-lib: Advanced Linux Sound Arch. output'
+
+optdepends=('alsa-lib: Advanced Linux Sound Arch. output'
             'pulseaudio: PulseAudio output'
             'jack: Jack Audio Connection Kit output'
             'lame: FileWriter MP3 output'
@@ -39,13 +37,14 @@ makedepends=("audacious" 'qt5-multimedia'
             'libcue: CUE playlist format'
 
             'qt5-multimedia: qtaudio support')
-
+            
 source=(https://github.com/audacious-media-player/audacious-plugins/archive/${_commit}.zip)
-sha256sums=('424baa8940e1cc983636cedd44dca6620c590fd5712595cf1a3131314dcb9048')
+md5sums=('06ff85ae07b1fba723f4b4a8e6d9f4a9')
 
 build() {
   cd "$srcdir/$pkgname-$_commit"
 
+./autogen.sh 
   ./configure \
     --prefix=/usr \
     --enable-amidiplug \
