@@ -14,7 +14,6 @@ depends=('audacious' 'qt5-multimedia' 'glib2' 'python2' 'alsa-lib' 'pulseaudio' 
 
 optdepends=('alsa-lib: Advanced Linux Sound Arch. output'
             'pulseaudio: PulseAudio output'
-            'jack: Jack Audio Connection Kit output'
             'lame: FileWriter MP3 output'
             'libvorbis: Vorbis input, FileWriter Vorbis output'
             'flac: FLAC input, FileWriter FLAC output'
