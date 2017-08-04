@@ -1,6 +1,6 @@
-_commit=b13a35db2cef474925b385eef8291ea21ec7fb36
+_commit=a8636ac13ab4ae284985733b316bbfed9283f684
 pkgname=audacious-plugins
-pkgver=3.8.2
+pkgver=3.9
 pkgrel=1
 pkgdesc="Plugins for Audacious"
 arch=('x86_64')
@@ -14,6 +14,7 @@ depends=('audacious' 'qt5-multimedia' 'glib2' 'python2' 'alsa-lib' 'pulseaudio' 
 
 optdepends=('alsa-lib: Advanced Linux Sound Arch. output'
             'pulseaudio: PulseAudio output'
+            'jack: Jack Audio Connection Kit output'
             'lame: FileWriter MP3 output'
             'libvorbis: Vorbis input, FileWriter Vorbis output'
             'flac: FLAC input, FileWriter FLAC output'
@@ -38,7 +39,7 @@ optdepends=('alsa-lib: Advanced Linux Sound Arch. output'
             'qt5-multimedia: qtaudio support')
             
 source=(https://github.com/audacious-media-player/audacious-plugins/archive/${_commit}.zip)
-md5sums=('06ff85ae07b1fba723f4b4a8e6d9f4a9')
+md5sums=('b75557a32e97def00dffd22201c846e4')
 
 build() {
   cd "$srcdir/$pkgname-$_commit"
