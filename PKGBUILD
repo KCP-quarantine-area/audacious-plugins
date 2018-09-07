@@ -1,6 +1,6 @@
-_commit=a8636ac13ab4ae284985733b316bbfed9283f684
+_commit=43db691af6b908122ea7f50feb646f7167b8a69e
 pkgname=audacious-plugins
-pkgver=3.9
+pkgver=3.10
 pkgrel=1
 pkgdesc="Plugins for Audacious"
 arch=('x86_64')
@@ -18,6 +18,7 @@ optdepends=('alsa-lib: Advanced Linux Sound Arch. output'
             'lame: FileWriter MP3 output'
             'libvorbis: Vorbis input, FileWriter Vorbis output'
             'flac: FLAC input, FileWriter FLAC output'
+            'ampache: Ampache support' 
 
             'mpg123: MP3 input'
             'faad2: AAC input'
@@ -39,7 +40,7 @@ optdepends=('alsa-lib: Advanced Linux Sound Arch. output'
             'qt5-multimedia: qtaudio support')
             
 source=(https://github.com/audacious-media-player/audacious-plugins/archive/${_commit}.zip)
-md5sums=('b75557a32e97def00dffd22201c846e4')
+md5sums=('5814b110f74847f22d8ad83cf95d0a85')
 
 build() {
   cd "$srcdir/$pkgname-$_commit"
